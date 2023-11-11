@@ -6,7 +6,7 @@ function ContactUs() {
   const email = useRef(null);
   const message = useRef(null);
 
-  const HandleSubmit = (e) => {
+  const HandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try{
       const formdata = {
