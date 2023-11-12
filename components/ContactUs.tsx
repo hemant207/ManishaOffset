@@ -10,9 +10,9 @@ function ContactUs() {
     e.preventDefault()
     try{
       const formdata = {
-        'name':name.current.value,
-        'email':email.current.value,
-        'message':message.current.value
+        'name':name.current?.value,
+        'email':email.current?.value,
+        'message':message.current?.value
       }
       axios.post('http://localhost:3080/sendemail',formdata).then((res)=>{
         alert(res.data);
